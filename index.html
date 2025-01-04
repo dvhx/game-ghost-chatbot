@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ghost</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="image/ghost32.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/options.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/theme_light.css">
+  </head>
+  <body>
+    <!-- previous messages -->
+    <div id="output">
+        <div id="container">
+        </div>
+    </div>
+
+    <!-- text input -->
+    <div id="questionbox">
+        <button id="showmenu"></button>
+        <textarea id="question" autofocus placeholder="Type question here" maxlength="250"></textarea>
+        <button id="ask"></button>
+    </div>
+
+    <!-- options -->
+    <dialog id="edits" class="options">
+        <h1>Edits</h1>
+
+        <div id="edits_container">
+
+        <div class="edits_qa">
+            <div class="option" style="margin-bottom: 0;">
+                <div class="label_short">Q</div>
+                <input type="text" style="flex: 1;">
+            </div>
+            <div class="option">
+                <div class="label_short">A</div>
+                <input type="text" style="flex: 1;">
+            </div>
+        </div>
+
+        <div class="edits_qa">
+            <div class="option" style="margin-bottom: 0;">
+                <div class="label_short">Q</div>
+                <input type="text" style="flex: 1;">
+            </div>
+            <div class="option">
+                <div class="label_short">A</div>
+                <input type="text" style="flex: 1;">
+            </div>
+        </div>
+
+        </div>
+
+        <div class="option center">
+            <button id="edits_save">Save</button>
+            <button id="edits_cancel">Cancel</button>
+        </div>
+    </dialog>
+
+    <!-- options -->
+    <dialog id="options" class="options">
+        <h1>Options</h1>
+
+        <div class="option">
+            <div class="label">Name</div>
+            <input id="options_name" type="text" minlength="1" maxlength="20" style="flex: 1;">
+        </div>
+
+        <div class="option">
+            <div class="label">Date of birth</div>
+            <input id="options_borndate" type="date">
+        </div>
+
+        <div class="option">
+            <div class="label">Age</div>
+            <input id="options_age" type="number" min="1" max="999" step="1">years
+        </div>
+
+        <div class="option">
+            <div class="label">Gender</div>
+            <input id="options_sex" type="text">
+        </div>
+
+        <div class="option">
+            <div class="label">Country</div>
+            <input id="options_location" type="text" style="flex: 1;">
+        </div>
+
+        <div class="option">
+            <div class="label">City</div>
+            <input id="options_city" type="text" style="flex: 1;">
+        </div>
+
+        <div class="option">
+            <div class="label">Height</div>
+            <input id="options_height" type="text">
+        </div>
+
+        <div class="option">
+            <div class="label">Weight</div>
+            <input id="options_weight" type="text">
+        </div>
+
+        <div class="option">
+            <div class="label">Your name</div>
+            <input id="options_user_name" type="text">
+        </div>
+
+        <div class="option">
+            <div class="label">Your icon</div>
+            <img id="options_user_icon" src="image/user32.png" style="width: 32px; height: 32px;">
+            <button id="options_user_icon_change">Change</button>
+            <button id="options_user_icon_default">Default</button>
+        </div>
+
+        <div class="option">
+            <div class="label">Ghost icon</div>
+            <img id="options_ghost_icon" src="image/ghost32.png" style="width: 32px; height: 32px;">
+            <button id="options_ghost_icon_change">Change</button>
+            <button id="options_ghost_icon_default">Default</button>
+        </div>
+
+        <div class="option">
+            <div class="label">Theme</div>
+            <select id="options_theme">
+                <option>light</option>
+                <option>dark</option>
+                <option>pink</option>
+            </select>
+        </div>
+
+        <div class="option center">
+            <button id="options_save">Save</button>
+            <button id="options_cancel">Cancel</button>
+        </div>
+
+    </dialog>
+
+    <script type="text/javascript" src="ghost/ghost.js"></script>
+    <script type="text/javascript" src="ghost/why.js"></script>
+    <script type="text/javascript" src="ghost/character/slang.js"></script>
+    <script type="text/javascript" src="ghost/character/basic.js"></script>
+    <script type="text/javascript" src="ghost/character/ghost.js"></script>
+    <script type="text/javascript" src="ghost/character/relationship.js"></script>
+    <script type="text/javascript" src="ghost/character/ga.js"></script>
+    <script type="text/javascript" src="ghost/character/android.js"></script>
+
+    <script type="text/javascript" src="js/storage.js"></script>
+    <script type="text/javascript">SC.storage.prefix = 'GA_';</script>
+    <script type="text/javascript" src="js/context_menu.js"></script>
+    <script type="text/javascript" src="js/edits.js"></script>
+    <script type="text/javascript" src="js/math.js"></script>
+    <script type="text/javascript" src="js/name.js"></script>
+    <script type="text/javascript" src="js/elements_with_id.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>
+

@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+/* speech bubbles */
+
+#output {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+}
+#output .block {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 1ex;
+}
+#output .block.question {
+    justify-content: flex-end;
+}
+#output .avatar {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    margin-left: 1ex;
+    margin-right: 1ex;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#output .user {
+    background-image: url('../image/user32.png');
+}
+#output .ghost {
+    background-image: url('../image/ghost32.png');
+}
+#output .none {
+    min-width: 32px;
+    width: 32px;
+}
+#output .bubble {
+    border-radius: 1ex;
+    box-shadow: 0.2ex 0.2ex 0.2ex rgba(0,0,0,0.2);
+    padding: 1ex;
+    margin: 0;
+}
+#output .question {
+    margin-top: 1ex;
+}
+#output .question .bubble {
+    background-color: #eee;
+    border-top-right-radius: 0;
+}
+#output .answer .bubble {
+    background-color: lightblue;
+    border-top-left-radius: 0;
+}
+
+/* input */
+
+#questionbox {
+    display: flex;
+    width: 100vw;
+    padding-top: 0.5ex;
+    padding-bottom: 1ex;
+}
+#questionbox textarea {
+    flex: 1;
+    resize: none;
+    border: 0;
+    border-radius: 1ex;
+    padding: 1ex;
+    box-shadow: 0.2ex 0.2ex 0.2ex rgba(0,0,0,0.2);
+    background-color: #eee;
+    border-top-right-radius: 0;
+    outline: none;
+    font-family: sans-serif;
+    font-size: medium;
+}
+#questionbox button {
+    width: 32px;
+    height: 32px;
+    margin: 1ex;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-family: sans-serif;
+    font-size: medium;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+}
+#ask {
+    background-image: url('../image/ask32.png');
+}
+#showmenu {
+    background-image: url('../image/menu32.png');
+}
+
+/* make buttons in options/edits bigger */
+
+form button {
+    min-width: 2cm;
+    min-height: 1.1cm;
+}
+form input[type=submit] {
+    min-width: 2cm;
+    min-height: 1.1cm;
+}
+
+/* make it less wide on desktop */
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+    #output::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        align-items: center;
+    }
+    #output, #questionbox {
+        max-width: 30em;
+        min-width: 50vw;
+        _margin: auto;
+    }
+}
+

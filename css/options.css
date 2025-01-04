@@ -1,0 +1,45 @@
+/* options stylesheet */
+
+.options {
+    _max-width: 100vw;
+    _min-height: 12em;
+    border: none;
+    box-shadow: 0 0 1ex black;
+    border-radius: 4px;
+    outline: none;
+}
+.options h1 {
+    margin: 1ex;
+    margin-top: 0;
+    font-size: large;
+    text-align: center;
+}
+.options .option {
+    display: flex;
+    margin-bottom: 1ex;
+    align-items: center;
+}
+.options .option .label {
+    min-width: 8em;
+    text-align: right;
+}
+.options .option .label_short {
+    min-width: 1em;
+    text-align: right;
+}
+.options button, #options input, #options select {
+    min-height: 0.8cm;
+    margin-left: 0.5ex;
+    margin-right: 0.5ex;
+}
+.options .center {
+    justify-content: center;
+}
+.options {
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+.options .edits_qa input[type=text] {
+    min-width: 80vw;
+}
+

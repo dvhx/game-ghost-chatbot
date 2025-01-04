@@ -1,0 +1,52 @@
+/* pink theme for chat messages */
+
+/* chat */
+
+body {
+    background-color: #fcc;
+    color: black;
+}
+#container .question .bubble {
+    background-color: #faa;
+}
+#container .answer .bubble {
+    background-color: #fee;
+}
+#questionbox textarea {
+    background-color: #faa;
+    color: black;
+}
+#questionbox textarea::placeholder {
+    color: #c99;
+}
+
+/* edits */
+
+.options {
+    background-color: #fcc;
+    color: black;
+}
+
+.options input[type=text], .options input[type=number], .options input[type=date] {
+    background-color: #faa !important;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999
+}
+
+.options button, .options input[type=submit], .options input[type=button], .options select, .sc_context_menu button {
+    border: 1px solid #fcc;
+    border-radius: 3px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    background-color: #b88;
+    background-image: linear-gradient(to bottom, #b88, #a77);
+}
+.options button:hover, .options input[type=submit]:hover, .options input[type=button]:hover {
+    border:1px solid #a77;
+    background-color: #b88;
+    background-image: linear-gradient(to bottom, #c88, #b77);
+}
+
+
