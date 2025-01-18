@@ -3,7 +3,7 @@
 // global: window, document, GA, GHOST, prompt, URL, alert
 "use strict";
 
-var SC = window.SC || {}
+var SC = window.SC || {};
 
 SC.options = function (aCallback) {
     // Show options dialog and handle inputs
@@ -54,7 +54,7 @@ SC.options = function (aCallback) {
         var s = SC.user.params['$ghosticon;'] || '';
         var url = prompt('Change ghost icon', s.startsWith('http') ? s : 'http://');
         if (url || (url === '')) {
-            e.options_ghost_icon.src = validateUrl(url, 'image/ghost32.png');;
+            e.options_ghost_icon.src = validateUrl(url, 'image/ghost32.png');
         }
     };
     e.options_theme.value = SC.user.params['$theme;'] || 'light';

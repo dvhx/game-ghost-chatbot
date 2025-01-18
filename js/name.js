@@ -2,7 +2,7 @@
 "use strict";
 // globals: GHOST
 
-var SC = window.SC || {}
+var SC = window.SC || {};
 
 SC.name = (function () {
     var self = {},

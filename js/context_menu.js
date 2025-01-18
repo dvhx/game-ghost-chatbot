@@ -2,7 +2,7 @@
 "use strict";
 // globals: document
 
-var SC = window.SC || {}
+var SC = window.SC || {};
 
 SC.contextMenu = function (aLabels, aCallback, aSecondaryLabels) {
     // Show simple context menu with buttons and dark background

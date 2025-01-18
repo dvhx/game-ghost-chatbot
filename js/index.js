@@ -2,7 +2,7 @@
 "use strict";
 // globals: GHOST, window, document, requestAnimationFrame, setTimeout, Android, DOMParser
 
-var SC = window.SC || {}
+var SC = window.SC || {};
 
 // User's character
 SC.user = SC.storage.readObject('GHOST_USER', GHOST.createCharacter('Ghost', 'user'));
@@ -38,7 +38,7 @@ SC.saveUser = function () {
 SC.edit = function (event) {
     // edit single answer
     var bubble = event.target;
-    console.log('edit', bubble)
+    console.log('edit', bubble);
 
     // make bubble editable
     bubble.contentEditable = true;
@@ -185,7 +185,7 @@ SC.ask = function () {
         return;
     }
     if (q === '#purge') {
-        localStorage.clear();
+        SC.storage.eraseAll();
         document.location.reload();
         return;
     }

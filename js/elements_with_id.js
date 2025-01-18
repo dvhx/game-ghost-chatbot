@@ -4,7 +4,7 @@
 // global: window, document
 "use strict";
 
-var SC = window.SC || {}
+var SC = window.SC || {};
 
 SC.elementsWithId = function () {
     // Return all elements with defined id, if id is set, it is assumed they will be used so we can have them all at once
